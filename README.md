@@ -5,7 +5,7 @@
 ```bash
 docker login
 ```
--[x] Enter your Docker Hub username and password (or personal access token).
+- [x] Entered Docker Hub username and password (or personal access token).
 
 2.Pull Jenkins Image
 
@@ -39,11 +39,13 @@ Copied password shown and pasted into the Jenkins setup page.
 
 Followed the on‑screen setup wizard:
 
-Installed recommended plugins
-Created your admin account
-Jenkins dashboard had appear
+- [x] Installed recommended plugins
+- [x] Created your admin account
+- [x] Jenkins dashboard had appear
 
 6. Integration
 
-Installed Docker Pipeline plugin in Jenkins.
-Configured jobs to run Docker builds using the mounted socket.
+- [x] Installed Docker Pipeline plugin in Jenkins.
+- [x]Configured jobs to run Docker builds using the mounted socket.
+
+7.
