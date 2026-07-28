@@ -127,11 +127,11 @@ kubectl get pods -n argocd
 
 10. Accesing application
 
-Verify Deployment
+- [x] Verified Deployment
 
-- Check pods and services:
+- Checked pods and services:
 
-   ```bash
+  ```bash
   kubectl get pods -n defaut
   ```
 <img width="510" height="74" alt="image" src="https://github.com/user-attachments/assets/0467158c-814a-43b3-b7b2-25e3d6253bcc" />
@@ -142,13 +142,13 @@ kubectl get svc -n default
 <img width="536" height="54" alt="image" src="https://github.com/user-attachments/assets/4bef62ad-fb93-4803-a5ba-d51506757276" />
 - Made sure pods are in Running state.
 
-- Use Minikube to expose the service:
+- Used Minikube to expose the service:
   ```bash
   minikube service todo-app -n default
   ```
   <img width="606" height="297" alt="image" src="https://github.com/user-attachments/assets/b7ff53d3-1351-4005-b281-bbe7991c1cee" />
 
- - copy the url and paste in browser to access the application
+ - copied the url and pasted in browser to access the application
    <img width="947" height="414" alt="image" src="https://github.com/user-attachments/assets/791d3ec3-f5a3-4e56-b14a-39ee5b83877b" />
 
 
