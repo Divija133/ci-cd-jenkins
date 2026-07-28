@@ -79,7 +79,7 @@ minikube start --driver=docker
 
 10. ArgoCD Setup on Minikube
 
--[x] Created namespace
+- [x] Created namespace
  
  ```bash
 kubectl create namespace argocd
@@ -114,7 +114,7 @@ kubectl port-forward svc/argocd-server -n argocd 8080:443
 
 - [x] Verified with:
 ```bash
-kubectl get pods -n jenkins
+kubectl get pods -n default
 ```
 
 
