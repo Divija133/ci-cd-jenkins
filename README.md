@@ -58,6 +58,60 @@ Followed the on‑screen setup wizard:
 
 8. Storing Secrets in Jenkins
 
-- [x] stored secrets in Jenkins Credentials → referenced them by ID in Jenkinsfile → Jenkins injected them securely during pipeline execution.
+- [x] stored secrets in Jenkins Credentials.
+- [ ] referenced them by ID in Jenkinsfile.
+- [ ]  Jenkins injected them securely during pipeline execution.
 
-   
+9. Kubernetes with Minikube
+
+- [] Installed Minikube
+
+  ```bash
+curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+sudo install minikube-linux-amd64 /usr/local/bin/minikube
+```
+- [] Started the cluster
+
+```bash
+minikube start --driver=docker
+```
+- This spun up a single‑node Kubernetes cluster inside Docker.
+
+10. ArgoCD Setup on Minikube
+
+-[] Created namespace
+ 
+ ```bash
+kubectl create namespace argocd
+```
+-[] Installed ArgoCD
+```bash
+kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
+```
+-[] Exposed ArgoCD server
+```bash
+kubectl port-forward svc/argocd-server -n argocd 8080:443
+```
+-[] Logged in
+- Retrieved initial admin password:
+  ```bash
+  kubectl get secret argocd-initial-admin-secret -n argocd \
+  -o jsonpath="{.data.password}" | base64 -d
+```
+- Logged in at http://localhost:8081 with admin.
+
+-[] Connected GitHub repo
+- Added repo containing Kubernetes manifests.
+- Created an ArgoCD Application pointing to that repo.
+
+-[] Synced Application
+- Clicked Sync in ArgoCD UI.
+- Jenkins pods deployed into Minikube cluster.
+- Verified with:
+
+```bash
+kubectl get pods -n jenkins
+```
+
+
+
