@@ -84,7 +84,7 @@ minikube start --driver=docker
  ```bash
 kubectl create namespace argocd
 ```
--[x] Installed ArgoCD
+- [x] Installed ArgoCD
 
 ```bash
 kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
@@ -94,7 +94,7 @@ kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/st
 ```bash
 kubectl port-forward svc/argocd-server -n argocd 8080:443
 ```
--[x] Logged in
+- [x] Logged in
 
 - Retrieved initial admin password:
 
@@ -104,11 +104,11 @@ kubectl port-forward svc/argocd-server -n argocd 8080:443
 ```
 - Logged in at http://localhost:8081 with admin.
 
--[x] Connected GitHub repo
+- [x] Connected GitHub repo
 - Added repo containing Kubernetes manifests.
 - Created an ArgoCD Application pointing to that repo.
 
--[x] Synced Application
+- [x] Synced Application
 - Clicked Sync in ArgoCD UI.
 - Jenkins pods deployed into Minikube cluster.
 
