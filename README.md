@@ -46,6 +46,18 @@ Followed the on‑screen setup wizard:
 6. Integration
 
 - [x] Installed Docker Pipeline plugin in Jenkins.
-- [x]Configured jobs to run Docker builds using the mounted socket.
+- [x] Configured jobs to run Docker builds using the mounted socket.
 
-7.
+7. Configure Jenkins Job
+- In Jenkins UI → New Item → Pipeline.
+- Select Pipeline script from SCM.
+- Choose Git and paste your repo URL.
+- Created webhook in git
+- Enabled GitHub hook trigger for GITScm polling
+- Jenkins will automatically look for Jenkinsfile in the root of the repo
+
+8. Storing Secrets in Jenkins
+
+- [x] stored secrets in Jenkins Credentials → referenced them by ID in Jenkinsfile → Jenkins injected them securely during pipeline execution.
+
+   
