@@ -32,4 +32,18 @@ http://localhost:8081
 To get the initial admin password:
 ```bash
 docker logs jenkins
-Copy the password shown and paste it into the Jenkins setup page.
+```
+Copied password shown and pasted into the Jenkins setup page.
+
+5.Install Plugins and Create Admin User
+
+Followed the on‑screen setup wizard:
+
+Installed recommended plugins
+Created your admin account
+Jenkins dashboard had appear
+
+6. Integration
+
+Installed Docker Pipeline plugin in Jenkins.
+Configured jobs to run Docker builds using the mounted socket.
