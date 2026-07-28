@@ -114,8 +114,48 @@ kubectl port-forward svc/argocd-server -n argocd 8080:443
 
 - [x] Verified with:
 ```bash
-kubectl get pods -n default
+kubectl get pods -n argocd
 ```
+<img width="685" height="121" alt="image" src="https://github.com/user-attachments/assets/2640d47a-ee26-4e1b-a612-2560bbe8ea8f" />
+
+- Used minikube to access the service
+<img width="761" height="226" alt="image" src="https://github.com/user-attachments/assets/8b2c2357-66fa-41a6-896f-d6f06a5056b8" />
+-
+-  copied the url and pasted in browser
+<img width="956" height="481" alt="image" src="https://github.com/user-attachments/assets/7afa71fa-e6a1-4ef5-830b-241fbf4d2a03" />
+
+
+10. Accesing application
+
+Verify Deployment
+
+- Check pods and services:
+
+   ```bash
+  kubectl get pods -n defaut
+  ```
+<img width="510" height="74" alt="image" src="https://github.com/user-attachments/assets/0467158c-814a-43b3-b7b2-25e3d6253bcc" />
+
+```bash
+kubectl get svc -n default
+```
+<img width="536" height="54" alt="image" src="https://github.com/user-attachments/assets/4bef62ad-fb93-4803-a5ba-d51506757276" />
+- Made sure pods are in Running state.
+
+- Use Minikube to expose the service:
+  ```bash
+  minikube service todo-app -n default
+  ```
+  <img width="606" height="297" alt="image" src="https://github.com/user-attachments/assets/b7ff53d3-1351-4005-b281-bbe7991c1cee" />
+
+ - copy the url and paste in browser to access the application
+   <img width="947" height="414" alt="image" src="https://github.com/user-attachments/assets/791d3ec3-f5a3-4e56-b14a-39ee5b83877b" />
+
+
+
+
+
+
 
 
 
