@@ -4,7 +4,7 @@
 
 Ensured Linux environment has the latest package lists.
 
-''' bash
+``` bash
 sudo apt-get update
 sudo apt-get upgrade -y
-'''
+```
