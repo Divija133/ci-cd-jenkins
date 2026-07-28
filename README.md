@@ -1,53 +1,35 @@
 # ci-cd-jenkins
 
-1. Update Package Index
-
-Ensured Linux environment has the latest package lists.
-
-``` bash
-sudo apt-get update
-sudo apt-get upgrade -y
-```
-
-2.Install Required Packages
-
-Installed dependencies needed for Docker to run.
+1. Log in to Docker Hub
 
 ```bash
-sudo apt-get install -y ca-certificates curl gnupg lsb-release
+docker login
 ```
+-[x] Enter your Docker Hub username and password (or personal access token).
 
-3.Add Docker’s Official GPG Key
-
-Ensured package authenticity.
+2.Pull Jenkins Image
 
 ```bash
-sudo mkdir -p /etc/apt/keyrings
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+docker pull jenkins/jenkins:lts
 ```
 
-4.Set Up Docker Repository
-
-Added Docker’s stable repository to apt sources.
+3. Run Jenkins Container
 
 ```bash
-echo \"deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable\" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+docker run -d --name jenkins \
+  -p 8081:8080 -p 50000:50000 \
+  -v /var/run/docker.sock:/var/run/docker.sock \
+  -v jenkins_home:/var/jenkins_home \
+  jenkins/jenkins:lts
 ```
 
-5.Install Docker Engine
+4.Access Jenkins
 
-Installed Docker CE, CLI, and containerd.
-
+Open your browser and go to:
 ```bash
-sudo apt-get update
-sudo apt-get install -y docker-ce docker-ce-cli containerd.io docker-compose-plugin
+http://localhost:8081
 ```
-
-6.Verify Installation
-
-Confirmed Docker is installed and running.
-
+To get the initial admin password:
 ```bash
-docker --version
-sudo service docker start
-```
+docker logs jenkins
+Copy the password shown and paste it into the Jenkins setup page.
