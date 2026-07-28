@@ -89,11 +89,7 @@ kubectl create namespace argocd
 ```bash
 kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
 ```
--[x] Exposed ArgoCD server
 
-```bash
-kubectl port-forward svc/argocd-server -n argocd 8080:443
-```
 - [x] Logged in
 
 - Retrieved initial admin password:
@@ -118,12 +114,15 @@ kubectl get pods -n argocd
 ```
 <img width="685" height="121" alt="image" src="https://github.com/user-attachments/assets/2640d47a-ee26-4e1b-a612-2560bbe8ea8f" />
 
-- Used minikube to access the service
+- [x] Exposed ArgoCD server
+- Changed minikube-service cluster type to node port
+```bash
+minikube service argocd-server -n argocd
+```
 <img width="761" height="226" alt="image" src="https://github.com/user-attachments/assets/8b2c2357-66fa-41a6-896f-d6f06a5056b8" />
--
+
 -  copied the url and pasted in browser
 <img width="956" height="481" alt="image" src="https://github.com/user-attachments/assets/7afa71fa-e6a1-4ef5-830b-241fbf4d2a03" />
-
 
 10. Accesing application
 
