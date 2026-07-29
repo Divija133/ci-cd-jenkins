@@ -1,4 +1,4 @@
-# Accessing application using gitops workflow
+# Accessing Application Using GitOps Workflow
 
 1. Log in to Docker Hub
 
@@ -170,9 +170,6 @@ C:\Windows\System32\drivers\etc\hosts
 ```bash
 http://todo.local
  ```
-
-<img width="767" height="458" alt="image" src="https://github.com/user-attachments/assets/70974340-e3d0-4785-b421-e88655190a49" />
-
 
 
 
