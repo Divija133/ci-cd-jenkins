@@ -150,6 +150,27 @@ kubectl get svc -n default
  - copied the url and pasted in browser to access the application
    <img width="947" height="414" alt="image" src="https://github.com/user-attachments/assets/791d3ec3-f5a3-4e56-b14a-39ee5b83877b" />
 
+11. Exposed application through url
+- Enable Ingress in Minikube
+```bash
+minikube addons enable ingress
+```
+- Verify Ingress Controller
+```bash
+kubectl get pods -n kube-system | grep ingress
+```
+- Defined spec.type: ClusterIP in service.yml file
+- Created Ingress Resource in which Ingress maps external hostnames/paths to your service.
+- Update Hosts File using this path
+'''bash
+C:\Windows\System32\drivers\etc\hosts
+```
+- Opened the application in browser using the URL
+```bash
+http://todo.local
+ ```
+
+
 
 
 
