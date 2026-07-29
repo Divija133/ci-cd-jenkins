@@ -1,4 +1,4 @@
-# ci-cd-jenkins
+# Jenkins pipeline using gitops workflow
 
 1. Log in to Docker Hub
 
