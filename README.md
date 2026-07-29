@@ -1,4 +1,4 @@
-# Jenkins pipeline using gitops workflow
+# Accessing application using gitops workflow
 
 1. Log in to Docker Hub
 
