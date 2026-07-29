@@ -160,12 +160,13 @@ minikube addons enable ingress
 kubectl get pods -n kube-system | grep ingress
 ```
 - Defined spec.type: ClusterIP in service.yml file
-- Created Ingress Resource in which Ingress maps external hostnames/paths to your service.
+- Created Ingress Resource in which Ingress maps external hostnames/paths to the service.
 - Update Hosts File using this path
 '''bash
 C:\Windows\System32\drivers\etc\hosts
 ```
 - Opened the application in browser using the URL
+
 ```bash
 http://todo.local
  ```
