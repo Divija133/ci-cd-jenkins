@@ -31,7 +31,7 @@ http://localhost:8081
 ```
 To get the initial admin password:
 ```bash
-docker logs jenkins
+docker exec <container_name_or_id> cat /var/jenkins_home/secrets/initialAdminPassword
 ```
 Copied password shown and pasted into the Jenkins setup page.
 
